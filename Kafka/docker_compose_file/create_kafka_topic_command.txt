@@ -1,0 +1,5 @@
+sh-4.4$ kafka-topics --create --topic kafka-testing-topic  --bootstrap-server "localhost:9092"
+Created topic kafka-testing-topic.
+sh-4.4$ kafka-topics --list --bootstrap-server "localhost:9092"
+kafka-testing-topic
+sh-4.4$
