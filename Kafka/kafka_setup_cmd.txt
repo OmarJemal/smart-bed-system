@@ -1,0 +1,25 @@
+
+Start Zookeeper Server (kafka/):
+bin/zookeeper-server-start.sh config/zookeeper.properties
+
+Start Kafka Server (kafka/):
+bin/kafka-server-start.sh config/server.properties
+
+Create Topic (kafka/):
+bin/kafka-topics.sh --create --bootstrap-server 10.0.0.188:9092 --replication-factor 1 --partitions 1 --topic test_topic1
+
+Check if Topic exist (kafka/):
+bin/kafka-topics.sh --list --bootstrap-server 10.0.0.188:9092
+
+Start Producer (kafka/):
+bin/kafka-console-producer.sh --broker-list 10.0.0.188:9092 --topic test_topic1
+
+Start Consumer (kafka/):
+bin/kafka-console-consumer.sh --bootstrap-server 10.0.0.188:9092 --topic test_topic1
+
+Check messages from beginning (kafka/):
+bin/kafka-console-consumer.sh --bootstrap-server 10.0.0.188:9092 --topic test_topic1 --from-beginning
+
+	
+Reference:
+https://www.youtube.com/watch?v=yq4rLLZhmWU
